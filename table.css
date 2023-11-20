@@ -1,0 +1,305 @@
+.styled-table {
+  border-collapse: collapse;
+  /* margin: 25px 0; */
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th {
+  font-family: Helvetica;
+  min-width: 150px;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.styled-table td {
+  padding: 12px 15px;
+  text-align: center;
+  position: relative;
+  &:hover &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: black;
+    z-index: -1;
+  }
+
+  &::after {
+    background-color: #009879;
+  }
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+h1 {
+  color: #009879;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+}
+
+img {
+  width: 120px;
+  padding-left: 530px;
+}
+
+.button-container {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #009879;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.button:hover {
+  background-color: #05624f;
+}
+
+input[type="text"] {
+  padding: 5px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+/* Style for pagination buttons */
+#pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#prev-page,
+#next-page {
+  background-color: #009879;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#prev-page:hover,
+#next-page:hover {
+  background-color: #05624f;
+}
+
+#search {
+  width: 150px; /* Initial fixed width */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  transition: width 0.3s; /* Smooth width transition */
+}
+
+#rows-dropdown-container {
+  text-align: right;
+  margin: 10px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+select {
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Add this CSS to your existing CSS file or create a new one */
+
+#table-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#add-entry-button,
+#update-entry-button {
+  display: block;
+  margin: 10px auto;
+  background-color: #009879;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#add-entry-button:hover,
+#update-entry-button:hover {
+  background-color: #05624f;
+}
+
+#add-entry-modal,
+#update-entry-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.modal h2 {
+  text-align: center;
+}
+
+.modal .form-group {
+  margin: 5px;
+  text-align: center;
+}
+
+.modal label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: border-color 0.3s;
+}
+
+.modal input:focus {
+  border-color: #009879;
+  outline: none;
+}
+
+.modal button {
+  background-color: #009879;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal button:hover {
+  background-color: #05624f;
+}
+
+.modal button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.scrollable-form-container {
+  max-height: 400px; /* Adjust the height as needed */
+  overflow-y: scroll;
+}
+
+#delete-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#id-to-delete {
+  width: 120px;
+  height: 24px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#delete-button {
+  background-color: #e74c3c; /* Red color for delete button */
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#delete-button:hover {
+  background-color: #c0392b; /* Darker red color on hover */
+}
+
+/* CSS for the "Total Rows" and "Total Columns" labels */
+td[colspan] {
+  color: black;
+  text-align: center;
+  background-color: #f0f0f0; /* Light gray background color */
+  font-weight: bold;
+}
+
+span#total-rows,
+span#total-columns {
+  color: #009879; /* Blue text color */
+  margin: 0 4px; /* Add some margin for spacing */
+}
+
+/* Style to separate the "Total Rows" and "Total Columns" */
+td[colspan]:before,
+td[colspan]:after {
+  content: "";
+  display: block;
+  width: 50%; /* Half of the td width */
+  border-bottom: 1px solid #009879; /* Blue underline */
+  margin: 6px auto; /* Adjust vertical spacing */
+}
